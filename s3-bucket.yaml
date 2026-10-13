@@ -1,0 +1,20 @@
+# s3-bucket.yaml
+apiVersion: s3.aws.upbound.io/v1beta2
+kind: Bucket
+metadata:
+  name: poc-demo-bucket
+spec:
+  forProvider:
+    region: us-east-1
+  providerConfigRef:
+    name: floci-aws
+---
+apiVersion: s3.aws.upbound.io/v1beta2
+kind: Bucket
+metadata:
+  name: poc-demo-bucket-2
+spec:
+  forProvider:
+    region: us-east-1
+  providerConfigRef:
+    name: floci-aws

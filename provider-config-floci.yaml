@@ -1,0 +1,24 @@
+apiVersion: aws.upbound.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: floci-aws
+spec:
+  credentials:
+    source: Secret
+    secretRef:
+      namespace: crossplane-system
+      name: floci-aws-creds
+      key: credentials
+  endpoint:
+    hostnameImmutable: true
+    services:
+      - s3
+      - s3control
+      - sts
+    url:
+      type: Static
+      static: http://floci.floci.svc.cluster.local:4566
+  s3_use_path_style: true
+  skip_credentials_validation: true
+  skip_metadata_api_check: true
+  skip_requesting_account_id: false
