@@ -13,6 +13,7 @@ spec:
       Environment: Dev
   providerConfigRef:
     name: floci-aws# ec2-instance.yaml
+---
 apiVersion: ec2.aws.upbound.io/v1beta1
 kind: Instance
 metadata:
