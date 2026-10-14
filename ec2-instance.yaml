@@ -2,28 +2,28 @@
 apiVersion: ec2.aws.upbound.io/v1beta1
 kind: Instance
 metadata:
-  name: poc-demo-vm
+  name: poc-demo-vm-1
 spec:
   forProvider:
     region: us-east-1
     ami: ami-12345678
     instanceType: t3.micro
     tags:
-      Name: poc-demo-vm
+      Name: poc-demo-vm-1
       Environment: Dev
   providerConfigRef:
     name: floci-aws# ec2-instance.yaml
 apiVersion: ec2.aws.upbound.io/v1beta1
 kind: Instance
 metadata:
-  name: poc-demo-vm
+  name: poc-demo-vm-2
 spec:
   forProvider:
     region: us-east-1
     ami: ami-12345678
     instanceType: t3.micro
     tags:
-      Name: poc-demo-vm
+      Name: poc-demo-vm-2
       Environment: Dev
   providerConfigRef:
     name: floci-aws
