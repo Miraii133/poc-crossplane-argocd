@@ -15,6 +15,7 @@ spec:
       - s3
       - s3control
       - sts
+      - ec2
     url:
       type: Static
       static: http://floci.floci.svc.cluster.local:4566
