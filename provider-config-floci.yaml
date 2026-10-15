@@ -2,6 +2,7 @@ apiVersion: aws.upbound.io/v1beta1
 kind: ProviderConfig
 metadata:
   name: floci-aws
+  namespace: dev
 spec:
   credentials:
     source: Secret
@@ -11,15 +12,14 @@ spec:
       key: credentials
   endpoint:
     hostnameImmutable: true
+    type: Static
+    url:
+      static: http://floci.floci.svc.cluster.local:4566
     services:
       - s3
       - s3control
       - sts
       - ec2
-    url:
-      type: Static
-      static: http://floci.floci.svc.cluster.local:4566
   s3_use_path_style: true
   skip_credentials_validation: true
   skip_metadata_api_check: true
-  skip_requesting_account_id: false
