@@ -12,7 +12,7 @@ spec:
       Name: poc-demo-vm-1
       Environment: Dev
   providerConfigRef:
-    name: floci-aws# ec2-instance.yaml
+    name: floci-aws
 ---
 apiVersion: ec2.aws.upbound.io/v1beta1
 kind: Instance
